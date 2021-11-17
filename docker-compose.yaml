@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  node-supert-test:
+    build:
+      context: .
+    ports:
+      - 4000:4000
+    volumes:
+      - /home/node/app/node_modules
+      - .:/home/node/app/
+
+  # node-supert-app:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   ports:
+  #     - 4000:4000
+  #   volumes:
+  #     - /home/node/app/node_modules
+  #     - .:/home/node/app/
