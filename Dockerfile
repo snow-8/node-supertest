@@ -14,4 +14,4 @@ RUN npm install
 COPY --chown=node:node ./ ./
 
 # COMMANDS
-CMD ["npm", "run", "test"]
+CMD ["npm", "run", "start"]
