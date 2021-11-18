@@ -23,7 +23,7 @@ jobs:
           docker login -u $DOCKER_ID -p $DOCKER_PASSWORD
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag snowowl8/node-supertest:$(date +%s)
+      run: docker build . --file Dockerfile --tag snowowl8/node-supertest:latest
 
     - name: Docker Push Image
       run: docker push ${{secrets.DOCKER_ID}}/node-supertest
